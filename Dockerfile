@@ -1,4 +1,4 @@
-FROM docker.io/centos
+FROM centos:latest
 RUN yum install httpd  -y
 RUN sed -i "s/Listen 80/Listen 8080/g" /etc/httpd/conf/httpd.conf
 COPY src/ /war/www/html/
